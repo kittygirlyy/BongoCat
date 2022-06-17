@@ -17,6 +17,9 @@
 #include <type_traits>
 #include <vector>
 
+#define WIN32_LEAN_AND_MEAN
+#pragma comment(lib, "ws2_32.lib")
+
 #if defined(_WIN32) || defined(__CYGWIN__)
 #  pragma push_macro("WIN32_LEAN_AND_MEAN")
 #  pragma push_macro("NOMINMAX")
