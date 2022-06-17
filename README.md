@@ -6,7 +6,7 @@ Explication:
 
 - Server-Side en Python
 
-- Chiffrement AES des strings
+- Chiffrement XOR des strings
 
 - Supporte HTTP
 
