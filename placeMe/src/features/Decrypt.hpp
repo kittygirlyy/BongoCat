@@ -1,5 +1,8 @@
 #pragma once
-#include <iostream>
+#ifndef DECRYPT_HPP
+#define DECRYPT_HPP
+
+#include "Core.hpp"
 
 /*
     Decrypt Xor class-based & Base64 implementation
@@ -8,7 +11,7 @@
     @version 1.1
 */
 
-class Cipher
+class Cipher : public Core
 {
     public:
         std::string decrypt(const int& key, std::string& data);
@@ -23,3 +26,5 @@ class Cipher
             return decrypt(key, decoded);
         }
 };
+
+#endif
