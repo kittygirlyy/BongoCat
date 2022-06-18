@@ -4,7 +4,7 @@
     Decrypt Xor class-based & Base64 implementation
     @file Decrypt.cpp
     @author miaouCorp
-    @version 1.0
+    @version 1.1
 */
 
 static constexpr const std::byte ENCODING_TABLE[]{
