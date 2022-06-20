@@ -7,7 +7,7 @@
 	@version 1.0
 */
 
-void Core::setKey(const int& k)
+void Core::setKey(const std::string& k)
 {
 	this->key = k;
 }
@@ -22,7 +22,7 @@ std::string Core::getEndPoint()
 	return this->endPoint;
 }
 
-int Core::getKey()
+std::string Core::getKey()
 {
 	return this->key;
 }

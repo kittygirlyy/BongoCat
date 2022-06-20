@@ -16,13 +16,13 @@ class Core
 {
 	private:
 		std::string endPoint;
-		int key;
+		std::string key;
 
 	public:
 		std::string getEndPoint();
-		int getKey();
+		std::string getKey();
 		void setEndPoint(const std::string& eP);
-		void setKey(const int& k);
+		void setKey(const std::string& k);
 };
 
 #endif

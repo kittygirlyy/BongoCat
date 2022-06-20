@@ -19,7 +19,7 @@ const char* Network::getIP(const std::string& ipWebsite)
 
 }
 
-const char* Network::getKey(const std::string& endPoint)
+const char* Network::getNetworkKey(const std::string& endPoint)
 {
     try {
         http::Request req{ endPoint };

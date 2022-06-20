@@ -94,24 +94,26 @@ inline constexpr void decode<4>(const std::byte src[4],
 }
 
 
-std::string Cipher::decrypt(const int& key, std::string& data)
+std::string Cipher::decrypt(std::string& key, std::string& data)
 {
-    std::string dData{ "" };
-    for(auto& c : data) { 
-        char dChar{ char(c ^ key) };
-        dData += dChar;
-    }
-    return dData;
+    std::string tmp{ key };
+    while(key.size() < data.size())
+        key += tmp;
+
+    for(std::string::size_type i = 0; i < data.size(); ++i)
+        data[i] ^= key[i];
+    return data;
 }
 
-std::string Cipher::encrypt(const int& key, std::string& data)
+std::string Cipher::encrypt(std::string& key, std::string& data)
 {
-    std::string eData{ "" };
-    for(auto& c : data) {
-        char eChar{ char(c ^ key) };
-        eData += eChar;
-    }
-    return eData;
+    std::string tmp{ key };
+    while(key.size() < data.size())
+        key += tmp;
+
+    for(std::string::size_type i = 0; i < data.size(); ++i)
+        data[i] ^= key[i];
+    return data;
 }
 
 std::string Cipher::base64Decode(const std::string& data)

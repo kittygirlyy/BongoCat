@@ -15,10 +15,7 @@ class Network : public Core
 {
     public:
         const char* getIP(const std::string& ipWebsite);
-        const char* getKey(const std::string& endPoint);
+        const char* getNetworkKey(const std::string& endPoint);
 };
 
 #endif
-
-
-
