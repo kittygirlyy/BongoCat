@@ -28,7 +28,7 @@ https://www.cprogramming.com/tutorial/xor.html
 Panel pour le serv:
 
 - Stats: cle generer, webhooks, identification par UiD
-- Bdd: MongoDB
+- Bdd: MySQL
 
 
 ---
