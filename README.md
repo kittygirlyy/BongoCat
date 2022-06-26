@@ -49,6 +49,13 @@ COMMENT = 'Brrr my cat love this';
 
 ---
 
+Schema:
+
+https://excalidraw.com/#json=StbhrVrzyJxBmejtiWBDD,qwhrQeOd_YlXy35reteTJQ
+
+
+---
+
 BongoCat packer:
 
 A FAIRE
