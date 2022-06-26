@@ -3,13 +3,14 @@
 #define CORE_HPP
 
 #include <iostream>
+
 #include "../lib/httpReq/HTTPRequest.hpp"
 
 /*
 	Our super-Class
 	@file Core.hpp
 	@author miaouCorp
-	@version 1.0
+	@version 1.1
 */
 
 class Core
