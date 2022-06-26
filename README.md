@@ -30,6 +30,16 @@ Panel pour le serv:
 - Stats: cle generer, webhooks, identification par UiD
 - Bdd: MySQL
 
+Bdd setup:
+
+CREATE TABLE `bongocat`.`infected` (
+  `attaquant` INT NULL,
+  `victime` INT NULL,
+  `ip` VARCHAR(45) NULL,
+  `key` VARCHAR(45) NULL)
+COMMENT = 'We ak like cats';
+
+
 
 ---
 
