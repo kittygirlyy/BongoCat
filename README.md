@@ -41,6 +41,12 @@ COMMENT = 'We ak like cats';
 
 
 
+CREATE TABLE `bongocat`.`keygen` (
+  `IP` VARCHAR(45) NULL,
+  `KEY` VARCHAR(45) NULL)
+COMMENT = 'Brrr my cat love this';
+
+
 ---
 
 BongoCat packer:
