@@ -41,6 +41,19 @@ COMMENT = 'We ak like cats';
 
 
 
+CREATE TABLE `bongocat`.`keygen` (
+  `IP` VARCHAR(45) NULL,
+  `KEY` VARCHAR(300) NULL)
+COMMENT = 'Brrr my cat love this';
+
+
+---
+
+Schema:
+
+https://excalidraw.com/#json=StbhrVrzyJxBmejtiWBDD,qwhrQeOd_YlXy35reteTJQ
+
+
 ---
 
 BongoCat packer:
