@@ -1,2 +1,2 @@
-export FLASK_APP=Main
+export FLASK_APP=app
 flask run --host=0.0.0.0

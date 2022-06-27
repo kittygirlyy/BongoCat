@@ -1,2 +1,2 @@
-$env:FLASK_APP = "Main"
+$env:FLASK_APP = "app"
 flask run --host=0.0.0.0
