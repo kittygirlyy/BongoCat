@@ -1,4 +1,5 @@
 #include "Network.hpp"
+#include <chrono>
 
 /*
     Networking
@@ -7,27 +8,29 @@
     @version 1.0
 */
 
-const char* Network::getIP(const std::string& ipWebsite)
+std::string Network::getIP(const std::string& ipWebsite)
 {
     try {
         http::Request req{ ipWebsite };
         const auto res{ req.send("GET") };
-        return reinterpret_cast<const char*>(res.body.data());
+        std::string data{ res.body.begin(), res.body.end() };
+        return data;
     } catch(const std::exception& e) {
         return e.what();
     }
 
 }
 
-const char* Network::getNetworkKey(const std::string& endPoint)
+std::string Network::getNetworkKey(const std::string& endPoint)
 {
     try {
+        std::chrono::milliseconds timeOut(6000);
         http::Request req{ endPoint };
         const std::string body{ "{\"bbyIsBad\": 1, \"meowIsGood\": 1}" };
-        const auto res{ req.send("POST", body, {{"Content-Type", "application/json"}}) };
-        return reinterpret_cast<const char*>(res.body.data());
+        const auto res{req.send("POST", body, {{"Content-Type", "application/json"}}, timeOut)};
+        std::string data{ res.body.begin(), res.body.end() };
+        return data;
     } catch(const std::exception& e) {
         return e.what();
     }
-
 }
