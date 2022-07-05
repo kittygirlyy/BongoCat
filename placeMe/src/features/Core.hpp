@@ -22,8 +22,10 @@ class Core
 	public:
 		std::string getEndPoint();
 		std::string getKey();
+
 		void setEndPoint(const std::string& eP);
 		void setKey(const std::string& k);
+		std::string parseBase(const std::string& KEP);
 };
 
 #endif

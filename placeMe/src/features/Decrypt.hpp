@@ -23,7 +23,8 @@ class Cipher : public Core
         std::string superDecrypt(std::string key, std::string data)
         {
             std::string decoded{ base64Decode(data) };
-            return decrypt(key, decoded);
+            std::string decodedKey{ base64Decode(key) };
+            return decrypt(decodedKey, decoded);
         }
 
         std::string superEncrypt( std::string key, std::string data)

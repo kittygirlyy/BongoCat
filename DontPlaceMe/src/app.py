@@ -3,14 +3,16 @@ from routes        import KeyGen
 from routes        import GetIP
 from routes        import GetConnectivity
 from Database      import miaou
+import                    logging
 
 """
 __author__ = "MiaouCorp"
 __copyright__ = "Nothing"
 __license__ = "Private"
-__version__ = "1.1"
+__version__ = "1.2"
 """
 
+logging.basicConfig(filename='miaou.log', level=logging.INFO)
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
