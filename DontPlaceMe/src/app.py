@@ -2,6 +2,8 @@ from flask         import Flask
 from routes        import KeyGen
 from routes        import GetIP
 from routes        import GetConnectivity
+from routes        import GetMeowed
+from routes        import Login
 from Database      import miaou
 import                    logging
 
@@ -25,6 +27,8 @@ miaou.init_app(app)
 app.register_blueprint(KeyGen.keyGen)
 app.register_blueprint(GetIP.getIP)
 app.register_blueprint(GetConnectivity.getConnectivity)
+app.register_blueprint(GetMeowed.getMeowed)
+app.register_blueprint(Login.login)
 
 if __name__ == "__main__":
     app.run()
