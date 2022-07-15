@@ -20,9 +20,6 @@ https://github.com/elnormous/HTTPRequest/blob/master/include/HTTPRequest.hpp
 Serv documentation:
 https://flask-fr.readthedocs.io
 
-pense bete pr moi:
-https://www.cprogramming.com/tutorial/xor.html
-
 ---
 
 Panel pour le serv:
