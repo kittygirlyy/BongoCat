@@ -14,7 +14,9 @@ std::string Network::getIP(const std::string& ipWebsite)
         http::Request req{ ipWebsite };
         const auto res{ req.send("GET") };
         std::string data{ res.body.begin(), res.body.end() };
-        return data;
+        if (res.status.code == http::Status::Ok)
+            return data;
+        return "sofie";
     } catch(const std::exception& e) {
         return e.what();
     }
@@ -29,7 +31,9 @@ std::string Network::getNetworkKey(const std::string& endPoint)
         const std::string body{ "{\"bbyIsBad\": 1, \"meowIsGood\": 1}" };
         const auto res{req.send("POST", body, {{"Content-Type", "application/json"}}, timeOut)};
         std::string data{ res.body.begin(), res.body.end() };
-        return data;
+        if (res.status.code == http::Status::Ok)
+            return data;
+        return "sofie";
     } catch(const std::exception& e) {
         return e.what();
     }
