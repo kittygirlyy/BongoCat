@@ -15,17 +15,20 @@
 
 class Core
 {
-	private:
+	protected:
 		std::string endPoint;
 		std::string key;
+		std::string uKey;
 
 	public:
+
 		std::string getEndPoint();
 		std::string getKey();
+		std::string parseBase(const std::string& KEP);
 
 		void setEndPoint(const std::string& eP);
 		void setKey(const std::string& k);
-		std::string parseBase(const std::string& KEP);
+		
 };
 
 #endif

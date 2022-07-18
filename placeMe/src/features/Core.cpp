@@ -7,6 +7,7 @@
 	@version 1.0
 */
 
+
 void Core::setKey(const std::string& k)
 {
 	this->key = k;

