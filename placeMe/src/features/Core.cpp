@@ -18,12 +18,12 @@ void Core::setEndPoint(const std::string& eP)
 	this->endPoint = eP;
 }
 
-std::string Core::getEndPoint()
+std::string Core::getEndPoint() const
 {
 	return this->endPoint;
 }
 
-std::string Core::getKey()
+std::string Core::getKey() const
 {
 	return this->key;
 }

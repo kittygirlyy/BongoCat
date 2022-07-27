@@ -21,9 +21,8 @@ class Core
 		std::string uKey;
 
 	public:
-
-		std::string getEndPoint();
-		std::string getKey();
+		std::string getEndPoint() const;
+		std::string getKey() const;
 		std::string parseBase(const std::string& KEP);
 
 		void setEndPoint(const std::string& eP);

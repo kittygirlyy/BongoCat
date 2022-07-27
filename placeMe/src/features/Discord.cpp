@@ -47,12 +47,12 @@ bool Discord::injectDiscord()
     return this->InjectionWrited = true;
 }
 
-bool Discord::isInjectionWrited()
+bool Discord::isInjectionWrited() const
 {
     return this->InjectionWrited;
 }
 
-bool Discord::isDiscordInstalled()
+bool Discord::isDiscordInstalled() const
 {
     return this->DiscordInstalled;
 }
