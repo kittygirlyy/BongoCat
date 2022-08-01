@@ -3,5 +3,18 @@
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\lib\httpReq\HTTPRequest.hpp" />
+    <ClCompile Include="src\features\Decrypt.cpp" />
+    <ClCompile Include="src\features\Core.cpp" />
+    <ClCompile Include="src\features\Network.cpp" />
+    <ClCompile Include="src\features\Malware.cpp" />
+    <ClCompile Include="src\features\Discord.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\features\Decrypt.hpp" />
+    <ClInclude Include="src\features\Core.hpp" />
+    <ClInclude Include="src\features\Network.hpp" />
+    <ClInclude Include="src\features\Malware.hpp" />
+    <ClInclude Include="src\Settings.hpp" />
+    <ClInclude Include="src\features\Discord.hpp" />
   </ItemGroup>
 </Project>

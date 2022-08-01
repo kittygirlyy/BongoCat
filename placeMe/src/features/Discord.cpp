@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Discord.hpp"
+#include <Windows.h>
 #include <array>
 #include <fstream>
 
@@ -7,7 +8,7 @@
     Discord class
     @file Discord.cpp
     @author miaouCorp
-    @version 1.0
+    @version 1.2
 */
 
 bool Discord::checkDiscord()
@@ -20,6 +21,30 @@ bool Discord::checkDiscord()
         return false;
 
     return this->DiscordInstalled = true;
+}
+
+bool Discord::killDiscord()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        DWORD pID;
+        HWND window{ FindWindowEx(0, 0, "Chrome_WidgetWin_1", 0) };
+        GetWindowThreadProcessId(window, &pID);
+        HANDLE pHandle{ OpenProcess(PROCESS_TERMINATE, FALSE, pID) };
+        TerminateProcess(pHandle, 1);
+        CloseHandle(pHandle);
+    }
+    return this->DiscordKilled = true;
+}
+
+bool Discord::restartDiscord()
+{
+    std::string const PROFILE{ getenv("USERPROFILE") };
+    std::string const PATH{ "\\AppData\\Local\\Discord\\" };
+    std::string const LOOKME{ PROFILE + PATH + "Update.exe --processStart Discord.exe"};
+    if (!system(LOOKME.c_str()))
+        return this->DiscordRestarted = true;
+    return false;
 }
 
 // A FINIR QUAND INJECTION JS FINI
@@ -55,4 +80,14 @@ bool Discord::isInjectionWrited() const
 bool Discord::isDiscordInstalled() const
 {
     return this->DiscordInstalled;
+}
+
+bool Discord::isDiscordKilled() const
+{
+    return this->DiscordKilled;
+}
+
+bool Discord::isDiscordRestarted() const
+{
+    return this->DiscordRestarted;
 }
