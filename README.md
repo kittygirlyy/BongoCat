@@ -36,13 +36,16 @@ CREATE TABLE `bongocat`.`infected` (
   `key` VARCHAR(45) NULL)
 COMMENT = 'We ak like cats';
 
-
-
 CREATE TABLE `bongocat`.`keygen` (
   `IP` VARCHAR(45) NULL,
   `KEY` VARCHAR(300) NULL)
 COMMENT = 'Brrr my cat love this';
 
+CREATE TABLE `bongocat`.`users` (
+  `key` VARCHAR(15) NOT NULL,
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`key`));
 
 ---
 
